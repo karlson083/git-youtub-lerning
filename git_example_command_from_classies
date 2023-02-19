@@ -1,0 +1,5 @@
+3.5 перенос веток
+git branch fix
+git checkout fix
+git branch -f master 54a4 ##принудительный перенос ветки мастер на нужный коммит
+git branch -f master fix
