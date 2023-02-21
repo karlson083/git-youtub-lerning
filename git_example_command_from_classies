@@ -1,0 +1,33 @@
+3.5 перенос веток
+git branch fix
+git checkout fix
+git branch -f master 54a4 ##принудительный перенос ветки мастер на нужный коммит
+git branch -f master fix
+git checkout -b master 54a5 ##создать ветку на опредленном коммите
+git checkout -B master 54a5 ##перенсти созданную ветку на опредленный коммит
+
+3.6 отделенный head (detech HEAD)
+git checkout 1319
+git cherrypic ##если закоммитили то что должно было быть в другой ветке
+
+3.7 восстановление предыдущих файлов
+git checkout master index.html
+git checkout HEAD index.html ##восставновить файл из текущей ветки
+git reset index.html ## убрать index.html из index оставить только в working directory
+
+
+3.8 Просмотр истории и старых файлов, символы ~, ^, @, поиск с :/
+git log
+git log --oneline
+git log fix --oneline
+git show master
+git show 6e23
+git show HEAD~ ##показать коммит родителя
+git show HEAD~~ --quaiet ##показать коммит родитея родитея в коротком варианте без видимости изминений
+git show HEAD~2 --quaiet ##показать коммит родитея родитея в коротком варианте без видимости изминений
+git show @~2 --quaiet ##показать коммит родитея родитея в коротком варианте без видимости изминений
+git show 6e23:index.html ##Показать файл бывший в определенном коммите
+git show :/add ## показать коммит с поиском по описанию в коммите покажет последний соответствующий отбору
+
+3.9 Слияние веток "перемоткой"
+git checkuout master
