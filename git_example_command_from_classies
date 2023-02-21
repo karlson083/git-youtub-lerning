@@ -31,3 +31,10 @@ git show :/add ## показать коммит с поиском по опис�
 
 3.9 Слияние веток "перемоткой"
 git checkuout master
+
+3.10 Удаление веток
+git branch -d fix
+git branch -D features
+git branch master2 1de0eab
+
+
