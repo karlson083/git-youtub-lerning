@@ -37,4 +37,9 @@ git branch -d fix
 git branch -D features
 git branch master2 1de0eab
 
-
+3.11 История переключений веток: лог ссылок reflog
+git reflog
+git branch features HEAD@{6}
+git reflog --date=iso
+git chekout @{-1} ##переключиться на ветку с которой перешли на текущую
+git checkout - ##переключиться на ветку с которой перешли на текущую
