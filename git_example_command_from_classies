@@ -51,3 +51,24 @@ git clean ## Очистка от untrackt files
 git clean -dxf ## Удаление файлов и директорий в том числе игнорируемые гит игнор принудительно
 
 5.1 Reset – Жесткий reset --hard: отмена изменений, удаление коммитов
+
+5.2 Reset – Мягкий reset --soft: замена и объединение коммитов
+
+5.3 Reset – Правка последнего коммита: commit --amend
+git commit --amend
+
+5.4 Reset – Смешанный reset (без флагов), сравнение видов reset
+
+git reset --mixed
+
+5.5 Reset – Таблица с действиями reset
+
+man git reset
+
+6.1 Просмотр – Сравнение коммитов, веток и не только: git diff
+
+git diff master features
+
+
+
+
