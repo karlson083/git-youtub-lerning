@@ -1,0 +1,74 @@
+3.5 перенос веток
+git branch fix
+git checkout fix
+git branch -f master 54a4 ##принудительный перенос ветки мастер на нужный коммит
+git branch -f master fix
+git checkout -b master 54a5 ##создать ветку на опредленном коммите
+git checkout -B master 54a5 ##перенсти созданную ветку на опредленный коммит
+
+3.6 отделенный head (detech HEAD)
+git checkout 1319
+git cherrypic ##если закоммитили то что должно было быть в другой ветке
+
+3.7 восстановление предыдущих файлов
+git checkout master index.html
+git checkout HEAD index.html ##восставновить файл из текущей ветки
+git reset index.html ## убрать index.html из index оставить только в working directory
+
+
+3.8 Просмотр истории и старых файлов, символы ~, ^, @, поиск с :/
+git log
+git log --oneline
+git log fix --oneline
+git show master
+git show 6e23
+git show HEAD~ ##показать коммит родителя
+git show HEAD~~ --quaiet ##показать коммит родитея родитея в коротком варианте без видимости изминений
+git show HEAD~2 --quaiet ##показать коммит родитея родитея в коротком варианте без видимости изминений
+git show @~2 --quaiet ##показать коммит родитея родитея в коротком варианте без видимости изминений
+git show 6e23:index.html ##Показать файл бывший в определенном коммите
+git show :/add ## показать коммит с поиском по описанию в коммите покажет последний соответствующий отбору
+
+3.9 Слияние веток "перемоткой"
+git checkuout master
+
+3.10 Удаление веток
+git branch -d fix
+git branch -D features
+git branch master2 1de0eab
+
+3.11 История переключений веток: лог ссылок reflog
+git reflog
+git branch features HEAD@{6}
+git reflog --date=iso
+git chekout @{-1} ##переключиться на ветку с которой перешли на текущую
+git checkout - ##переключиться на ветку с которой перешли на текущую
+
+4.1 Удаление "лишних" файлов и незакоммиченных изменений
+git checkout -f ##Сброс до текущего комита
+git reset --hard ##Сброс до текущего комита
+git clean ## Очистка от untrackt files
+git clean -dxf ## Удаление файлов и директорий в том числе игнорируемые гит игнор принудительно
+
+5.1 Reset – Жесткий reset --hard: отмена изменений, удаление коммитов
+
+5.2 Reset – Мягкий reset --soft: замена и объединение коммитов
+
+5.3 Reset – Правка последнего коммита: commit --amend
+git commit --amend
+
+5.4 Reset – Смешанный reset (без флагов), сравнение видов reset
+
+git reset --mixed
+
+5.5 Reset – Таблица с действиями reset
+
+man git reset
+
+6.1 Просмотр – Сравнение коммитов, веток и не только: git diff
+
+git diff master features
+
+
+
+
