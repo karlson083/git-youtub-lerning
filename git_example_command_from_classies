@@ -81,9 +81,27 @@ git diff --name-only # Вывод только имен файлов в кото
 
 
 
+6.2 Git – Просмотр – Вывод истории: git log, форматирование коммитов
+
+git log # Выводит коммиты достижимые из HEAD в обратном хронологическом порядке, вверху новые
+git log --pretty=oneline # Режим вывода лога для однострочного вывода (по умолчанию medium)
+git log --pretty=oneline --abbrev-commit # .. для вывода с короткими идентификаторами коммитов
+git log --oneline # тоже что выше только  одной командой
+git log --oneline --no-decorate #Вывод без декораторов
+
+git help log
+
+git log --pretty=format:'%h %cd | %s%d [%an]' # Варианты форматирования вывода см. git help log
+git log --pretty=format:'%h %cr | %s%d [%an]'
+git log --pretty=format:'%h %cd | %s%d [%an]' --date=short # Вариант форматирования с коротким выводом даты
+git log --pretty=format:'%h %cd | %s%d [%an]' --date=format:'%F %R' #Вариант для изминения форматирования вывода даты времени см. strftimr (вспомогательная функиция которую изпользует git но не описано в git log)
+git log --pretty=format:'%C(yellow)%h %C(red)%cd %C(dim green)| %C(cyan)%s%d %C(#667788)[%an]' --date=format:'%F %R' #Вариант с форматирование цвета вывода (%С) см. git help config
+git log --pretty=format:'%C(yellow)%h %C(red)%cd %C(dim green)| %C(cyan)%s%C(red)%d' --date=format:'%F %R'
+git config --global pretty.my format:'%C(yellow)%h %C(red)%cd %C(dim green)| %C(cyan)%s%C(red)%d' # Для сохранения формата под именем my
+git log --pretty=my # для использования своего формата вывода лога
+git config --global format.pretty my #Для использования по умолчанию для вывода лога формата my
+git config --global log.date format:'%F %R' # Настройка вывода формата времени по умолчанию
 
 
-
-
-
+git log -p #Вывод коммитов с содержимым того что было сделано 
 
