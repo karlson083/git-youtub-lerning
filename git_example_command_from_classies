@@ -67,7 +67,22 @@ man git reset
 
 6.1 Просмотр – Сравнение коммитов, веток и не только: git diff
 
-git diff master features
+git diff master features # Сравнение двух веток
+git diff master...features # Вывод всх изминений с момента отдления ветки от ветки
+git diff # сравнение "Working Directory" with "Index"
+git diff HEAD # сравнение "Working Directory" with Repository "(Head)"
+git diff @ # сравнение "Working Directory" with Repository "(Head)"  (   @   тоже самое что HEAD)
+git diff --cached # сравнение "Index" with Repository "(Head)"   (--cached озночает что нужно брать для сравнения Index  а не "Working Directory")
+
+git commit -v # Покажет какие изминения будут внесены при коммите в текстовом редакторе
+git config --global commit.verbose true # Выставить по умолчанию показывать какие изминения будут внесены при коммите в текстовом редакторе
+git diff ... -- <path> # -- <path> указывает что это указание пути или файла но не ветка, для случаев когда проекте есть папки с идентичными именами как ветки проекта
+git diff --name-only # Вывод только имен файлов в которых есть изминения для случаев когда изминений очень много
+
+
+
+
+
 
 
 
