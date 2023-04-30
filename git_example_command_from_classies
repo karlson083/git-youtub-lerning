@@ -143,6 +143,8 @@ git log -GsayHi -p # Вывод изминений в которых встре�
 git blame index.html
 git blame index.html --date=short
 
+7.1 Git – Слияние – "Истинное" слияние и разрешение конфликтов в git merge
+
 git diff --name-only master features
 git merge-base master features # Вывод общего коммита от которого пошло разделение
 git merge features # Слия ние текущей ветки с ветки features
