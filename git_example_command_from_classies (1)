@@ -148,5 +148,3 @@ git blame index.html --date=short
 git diff --name-only master features
 git merge-base master features # Вывод общего коммита от которого пошло разделение
 git merge features # Слия ние текущей ветки с ветки features
-
-7.2 Git – Слияние – Коммит слияния, дальнейшие слияния
